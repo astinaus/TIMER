@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: 'Pretendard-Regular', sans-serif;
+  background: no-repeat
+    radial-gradient(96.74% 276.79% at 3.59% 5.28%, #f0f4ff 0%, #a5b6ee 100%);
+  background-size: cover;
+  height: 100vh;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header */
+.logo-header {
+  margin-top: 72px;
+}
+
+.logo {
+  width: 244px;
+}
+
+/* Main */
+.timer {
+  margin: 60px 0;
+  width: 400px;
+  height: 360px;
+  background: linear-gradient(144.07deg, #5572bb 2.13%, #374b7c 102.97%);
+  box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+  border-radius: 16px;
+  color: #fff;
+  padding: 48px 44px 40px;
+}
+
+.timer-container {
+  margin: 23px 0 40px;
+  border-top: 1px solid #587584;
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.time:not(:last-child)::after {
+  content: '';
+  background: no-repeat url('./images/dot.png') center center/contain;
+  display: inline-block;
+  width: 6px;
+  height: 26px;
+  position: absolute;
+  right: -15px;
+  top: 67px;
+}
+
+.set-btn {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #354971;
+  border-radius: 4px;
+  background: linear-gradient(314.28deg, #304577 0%, #4c65a0 83%);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  background: #324577;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #617199;
+  padding: 16px 23px;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.start.active {
+  background-color: #5180ff;
+}
+
+.btn.reset.active {
+  background-color: #fb7099;
+}
+
+.btn.pause.active {
+  background-color: #15c2b8;
+}
+
+.btn::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.btn.start:disabled::before {
+  background: no-repeat url('./images/icon-start-disabled.png') center
+    center/contain;
+}
+
+.btn.start.active::before {
+  background: no-repeat url('./images/icon-start.png') center center/contain;
+}
+
+.btn.reset:disabled::before {
+  background: no-repeat url('./images/icon-reset-disabled.png') center
+    center/contain;
+}
+
+.btn.reset.active::before {
+  background: no-repeat url('./images/icon-reset.png') center center/contain;
+}
+
+.btn.pause.active::before {
+  background: no-repeat url('./images/icon-stop.png') center center/contain;
+}
+
+.btn.active {
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  color: #8596bf;
+  font-size: 14px;
+}
